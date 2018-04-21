@@ -5,7 +5,7 @@ For example, assuming 'Downloads' is your parent folder, you want to group all i
 
 It is recommended to create a Task Scheduler task to run this automatically at your discretion. [Tutorial below](#automate). Or if your comfortable with the sytax, a simple timed loop and adding the script to your startup folder would suffice.
 
-The included invisible script, simply runs the script without populating a console window as to not distrupt your workflow
+The included invisible.vbs script simply runs the script without populating a console window as to not distrupt your workflow
 
 ## Usage
 
