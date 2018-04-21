@@ -9,9 +9,19 @@ The included invisible script, simply runs the script without populating a conso
 
 ## Usage
 
-Getting started to configure your file structure is really easy. Simply type the name of the Folder you want the grouped items to go in each 'SUBDIR' variable. I have included the most common types of file extensions for each category already.
+Getting started to configure your file structure is really easy. Simply type the name of the Folder you want the grouped items to go in each 'SUBDIR' variable. First you need to specify the parent folder that will be monitored.
 
-If you leave the 'SUBDIR' variables empty with quotation marks, files of that type will not be considered for moving, regardless if there is anything in the filter variable.
+Simply change the following line in the script to the directory of your choice:
+
+```batch
+...
+SET DIR_PATH="D:\Your User Name\Downloads"
+...
+```
+
+Then specify your sub folders.
+
+If you leave the 'SUBDIR' variables empty with quotation marks, files of that type will not be considered for moving, regardless if there is anything in the filter variable or not.
 
 ```batch
 SET OFFICE_SUBDIR=""
@@ -26,12 +36,12 @@ SET OFFICE_FILTER="*.doc *.docx *.xls"
 
 ##### File Filters:
 
-Files should be filtered as exemplified above. Multiple types can be included in the variable when seperated by a space. It's important to follow the structure above for casual users: ```*.extn``` &lt;asterik&gt; &lt;period&gt; &lt;extension name> otherwise unexpected results could occur.
+Files should be filtered as exemplified above. Multiple types can be included in the variable when seperated by a space. It's important to follow the structure above for casual users: ```*.extn``` &lt;asterik&gt; &lt;period&gt; &lt;extension name> otherwise unexpected results could occur. I have included the most common types of file extensions for each category already.
 
 ## Automate
 
 To create a scheduled task, navigate to your systems Task Scheduler. <br>
-For Windows 10: Keyboard Shortcut press <kbd> Win </kbd> + <kbd> S </kbd> 
+For Windows 10: Keyboard Shortcut press <kbd> Win </kbd> + <kbd> S </kbd> and simply type task scheduler
 
 - Click on 'Create Task...'
 
@@ -47,8 +57,8 @@ I personally repeat mine every 1 minute. You can even do 5 seconds if you want, 
 - Click on the 'Actions' tab
   - Click on 'New...'
   - Action: Start A Program
-  - Program/Script box: Type in 'downloads-organizer-invisible-vbs'
-  - Start in (optional): Place the directory where you moved the 'downloads-organizer-invisible-vbs' to. This can be anywhere you wish. Simply type the parent directory's full path. For example: If you downloaded this repo and moved the files to your Documents folder. Type C:\Your User Name\Documents\
+  - Program/Script box: Type in 'downloads-organizer-invisible.vbs'
+  - Start in (optional): Place the directory where you moved the 'downloads-organizer-invisible.vbs' to. This can be anywhere you wish. Simply type the parent directory's full path. For example: If you downloaded this repo and moved the files to your Documents folder. Type C:\Your User Name\Documents\
   - Click 'OK'
 
 ![ss2](capture2.PNG)
