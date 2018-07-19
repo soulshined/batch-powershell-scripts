@@ -1,4 +1,4 @@
-# Downloads Organizer
+# Services Toggler
 
 Stop allowing programs to run a bunch of Services on startup that you use circumstantially. This prevents a bunch of services from consuming precious CPU resources on startup. 
 
